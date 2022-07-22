@@ -20,7 +20,7 @@ if [ ! -f $CACHE_FILE ]; then
   IMAGE_MAGICK_URL="https://sourceforge.net/projects/imagemagick/files/im7-src/ImageMagick-7.0.7-25.tar.gz/download?use_mirror=master&viasf=1"
 
   echo "-----> Downloading ImageMagick from $IMAGE_MAGICK_URL"
-  wget $IMAGE_MAGICK_URL -P $BUILD_DIR | indent
+  wget -O "$IMAGE_MAGICK_FILE"  $IMAGE_MAGICK_URL -P $BUILD_DIR | indent
 
   echo "-----> Extracting ImageMagick from $BUILD_DIR/$IMAGE_MAGICK_FILE"
   if [ ! -f $BUILD_DIR/$IMAGE_MAGICK_FILE ]; then
